@@ -28,10 +28,12 @@ export default function SignupBox() {
                             type="checkbox"
                             name="TOS"
                         />
-                        <label for="TOS">I agree to the Terms of Service.</label>
+                        <label for="TOS">I agree to the </label>
+                        <a for="TOS" href="tos">Terms of Service</a>
+                        <a>.</a>
                     </form>
-                    <button className="btn btn-secondary">Sign Up</button>
-                    <a href="Login"><br/>Login Instead</a>
+                    <button className="btn btn-inbetween">Sign Up</button>
+                    <a href="Login"><br/>Login instead?</a>
                 </section>
                 <FillerBox />
             </section>

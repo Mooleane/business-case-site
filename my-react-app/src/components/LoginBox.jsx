@@ -15,10 +15,10 @@ export default function LoginBox() {
                             placeholder="Password"
                         />
                     </form>
-                    <button className="btn btn-secondary">Login</button>
-                    <a href="Signup"><br/>Sign Up Instead</a>
+                    <button className="btn btn-inbetween">Login</button>
+                    <a href="Signup"><br/>Create an Account</a>
                 </section>
-                <FillerBox />
+
             </section>
         </>
     )

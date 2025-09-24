@@ -20,8 +20,8 @@ export default function Navbar() {
                 <div className="nav-right">
                     <section className="profile-section">
                         <a className="btn btn-secondary" href="Signup">Sign Up</a>
-                        <a className="btn btn-secondary">Login</a>
-                        <img src="src/assets/profile_icon.png" alt="profile-icon" width="50px"/>
+                        <a className="btn btn-secondary" href="Login">Login</a>
+                        <img src="src/assets/profile_icon.png" alt="profile-icon" width="40px"/>
                     </section>
                 </div>
             </ul>
