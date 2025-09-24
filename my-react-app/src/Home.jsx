@@ -2,7 +2,7 @@ import Navbar from "./components/Navbar.jsx"
 import Description from "./components/Description.jsx"
 import GetStarted from "./components/GetStarted.jsx"
 
-function App() {
+export default function Home() {
   return (
     <>
       <Navbar />
@@ -11,5 +11,3 @@ function App() {
     </>
   )
 }
-
-export default App
