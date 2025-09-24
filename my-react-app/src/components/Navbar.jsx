@@ -19,8 +19,8 @@ export default function Navbar() {
 
                 <div className="nav-right">
                     <section className="profile-section">
-                        <button className="btn btn-secondary">Sign Up</button>
-                        <button className="btn btn-secondary">Login</button>
+                        <a className="btn btn-secondary" href="Signup">Sign Up</a>
+                        <a className="btn btn-secondary">Login</a>
                         <img src="src/assets/profile_icon.png" alt="profile-icon" width="50px"/>
                     </section>
                 </div>
