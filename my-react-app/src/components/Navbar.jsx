@@ -22,7 +22,9 @@ export default function Navbar() {
                 <section className="profile-section">
                     <a className="btn btn-hover btn-secondary" href="Signup">Sign Up</a>
                     <a className="btn btn-hover btn-secondary" href="Login">Login</a>
-                    <img src="src/assets/profile_icon.png" alt="profile-icon" width="40px"/>
+                    <a href="Profile">
+                        <img src="src/assets/profile_icon.png" alt="profile-icon" width="40px"/>
+                    </a>
                 </section>
             </aside>
         </nav>

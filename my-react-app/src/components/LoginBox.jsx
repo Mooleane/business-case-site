@@ -1,5 +1,3 @@
-import FillerBox from "./FillerBox"
-
 export default function LoginBox() {
     return (
         <>
