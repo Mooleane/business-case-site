@@ -12,8 +12,10 @@ export default function LoginBox() {
                             type="text"
                             placeholder="Password"
                         />
+                        <a href="Dashboard">
+                            <button className="btn btn-hover btn-inbetween">Login</button>
+                        </a>
                     </form>
-                    <button className="btn btn-hover btn-inbetween">Login</button>
                     <a href="Signup"><br/>Create an Account</a>
                 </section>
 

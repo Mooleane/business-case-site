@@ -326,17 +326,21 @@ a {
 /* Profile Setup */
 .profile-setup {
   width: min(90%, 600px);
-  height: clamp(475px, 25vh, 600px);
-  margin-left: var(--spacing-average);
+  height: clamp(425px, 35vh, 475px);
 }
 
 .profile-setup > form {
   display: flex;
   flex-direction: column;
-  width: 90%;
   margin-left: var(--spacing-average);
 }
 
 .profile-setup textarea {
   resize: none;
+}
+
+.profile-setup section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

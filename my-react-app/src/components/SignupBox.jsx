@@ -31,8 +31,10 @@ export default function SignupBox() {
                         <label for="TOS">I agree to the </label>
                         <a for="TOS" href="tos">Terms of Service</a>
                         <a>.</a>
+                        <a href="Profile">
+                            <button className="btn btn-hover btn-inbetween">Sign Up</button>
+                        </a>
                     </form>
-                    <button className="btn btn-hover btn-inbetween">Sign Up</button>
                     <a href="Login"><br/>Login instead?</a>
                 </section>
                 <FillerBox />

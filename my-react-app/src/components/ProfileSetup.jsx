@@ -13,9 +13,7 @@ export default function ProfileSetup() {
                             max="120" 
                             required 
                         />
-                    </p>
-
-                    <p>
+                        <br/><br/>
                         <label htmlFor="country">Country: </label>
                         <select id="country" name="country" required>
                             <option value="">Select a country</option>
@@ -23,9 +21,7 @@ export default function ProfileSetup() {
                             <option value="ca">Canada</option>
                             <option value="uk">United Kingdom</option>
                         </select>
-                    </p>
-
-                    <p>
+                        <br/><br/>
                         <label htmlFor="state">State: </label>
                         <select id="state" name="state">
                             <option value="">Select a state</option>
