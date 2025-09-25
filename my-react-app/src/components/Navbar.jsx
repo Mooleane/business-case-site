@@ -1,9 +1,9 @@
 export default function Navbar() {
     return (
         <nav className="nav">
-            <ul className="bullet-text">
-                <div className="nav-left">
-                    <img src="" alt="app-logo" />
+            <header className="nav-left">
+                <img src="" alt="app-logo" />
+                <ul className="bullet-text">
                     <li>
                         <a className="app-text" href="/">App Name</a>
                     </li>
@@ -15,16 +15,16 @@ export default function Navbar() {
                     <li>
                         <a href="Dashboard">Dashboard</a>
                     </li>
-                </div>
+                </ul>
+            </header>
 
-                <div className="nav-right">
-                    <section className="profile-section">
-                        <a className="btn btn-secondary" href="Signup">Sign Up</a>
-                        <a className="btn btn-secondary" href="Login">Login</a>
-                        <img src="src/assets/profile_icon.png" alt="profile-icon" width="40px"/>
-                    </section>
-                </div>
-            </ul>
+            <aside className="nav-right">
+                <section className="profile-section">
+                    <a className="btn btn-hover btn-secondary" href="Signup">Sign Up</a>
+                    <a className="btn btn-hover btn-secondary" href="Login">Login</a>
+                    <img src="src/assets/profile_icon.png" alt="profile-icon" width="40px"/>
+                </section>
+            </aside>
         </nav>
     )
 }

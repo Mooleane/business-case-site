@@ -15,7 +15,7 @@ export default function LoginBox() {
                             placeholder="Password"
                         />
                     </form>
-                    <button className="btn btn-inbetween">Login</button>
+                    <button className="btn btn-hover btn-inbetween">Login</button>
                     <a href="Signup"><br/>Create an Account</a>
                 </section>
 

@@ -7,8 +7,8 @@ export default function ResourceList() {
             <section id="container">
                 <section className="resources">
                     <ul>
-                        {resources.map((label, index) => (
-                            <button key={index} className="btn btn-secondary">{label}</button>
+                        {resources.map((resource, index) => (
+                            <button key={index} className="btn btn-hover btn-secondary">{resource}</button>
                         ))}
                     </ul>
                 </section>
