@@ -173,11 +173,14 @@ a {
 .app-description {
     width: min(70%, 1200px);
     height: var(--card-height);
+    margin-left: var(--spacing-average);
 }
 
 .use-cases {
     width: min(30%, 600px);
     height: var(--card-height);
+    margin-right: var(--spacing-average);
+
 }
 
 .get-started {
@@ -279,6 +282,7 @@ a {
 
 .personalized-advice {
     width: min(90%, 1200px);
+    margin-left: var(--spacing-average);
 }
 
 .trending-skills,
@@ -311,9 +315,11 @@ a {
 .trend-info {
     width: min(90%, 1200px);
     height: var(--card-height);
+    margin-left: var(--spacing-average);
 }
 
 .trend-visualization {
     width: min(90%, 600px);
     height: var(--card-height);
+    margin-right: var(--spacing-average);
 }
