@@ -1,12 +1,12 @@
 import {BrowserRouter, Routes, Route } from 'react-router'
-import Home from './Home.jsx'
-import Resources from './Resources.jsx'
-import Signup from './Signup.jsx'
-import Login from './Login.jsx'
-import Profile from './Profile.jsx'
-import Dashboard from './Dashboard.jsx'
-import CareerRecommendations from './CareerRecommendations.jsx'
-import TrendTracker from './TrendTracker.jsx'
+import Home from './pages/Home.jsx'
+import Resources from './pages/Resources.jsx'
+import Signup from './pages/Signup.jsx'
+import Login from './pages/Login.jsx'
+import Profile from './pages/Profile.jsx'
+import Dashboard from './pages/Dashboard.jsx'
+import CareerRecommendations from './pages/CareerRecommendations.jsx'
+import TrendTracker from './pages/TrendTracker.jsx'
 
 export default function Router() {
 	return (
