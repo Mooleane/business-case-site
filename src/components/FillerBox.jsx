@@ -1,4 +1,4 @@
-import filler_stock from "../assets/filler_stock1"
+import filler_stock from "../assets/filler_stock.jpeg"
 
 export default function FillerBox() {
     return (
