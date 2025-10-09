@@ -1,3 +1,5 @@
+import profile_icon from "../assets/profile_icon.png"
+
 export default function Navbar() {
     return (
         <nav className="nav">
@@ -20,10 +22,10 @@ export default function Navbar() {
 
             <aside className="nav-right">
                 <section className="profile-section">
-                    <a className="btn btn-hover btn-secondary" href="Signup">Sign Up</a>
-                    <a className="btn btn-hover btn-secondary" href="Login">Login</a>
+                    <a className="btn btn-hover btn-small" href="Signup">Sign Up</a>
+                    <a className="btn btn-hover btn-small" href="Login">Login</a>
                     <a href="Profile">
-                        <img src="src/assets/profile_icon.png" alt="profile-icon" width="40px"/>
+                        <img className="profile-icon" src={profile_icon} alt="profile-icon" />
                     </a>
                 </section>
             </aside>

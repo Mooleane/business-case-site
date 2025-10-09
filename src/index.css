@@ -69,6 +69,14 @@ a {
   font-size: clamp(16px, 2vw, 20px);
 }
 
+.btn-small {
+  border: 2px solid black;
+  padding: 8px 15px;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  font-size: clamp(12px, 2vw, 16px);
+}
+
 .btn-hover:hover {
   transition: transform 0.1s ease;
   transform: scale(1.05);
@@ -104,6 +112,17 @@ a {
   align-items: center;
 }
 
+.profile-icon {
+  display: flex;
+  width: 35px;
+  justify-content: center;
+}
+
+.app-logo {
+  display: flex;
+  justify-content: center;
+}
+
 /* Dashboard Navbar */
 .dashboardnav {
   display: flex;
@@ -117,12 +136,12 @@ a {
   margin: 0 auto;
 }
 
-/* Bullet Text Styles (Ul, A) */
+/* Bullet Text Styles (ul, a) */
 .bullet-text {
-  font-size: clamp(20px, 2.5vw, 30px);
+  font-size: clamp(10px, 2.5vw, 20px);
   padding: var(--spacing-small);
   margin-top: 0px;
-  margin-bottom: 5px;
+  margin-bottom: 0px;
   gap: 24px;
   display: flex;
   align-items: center;
