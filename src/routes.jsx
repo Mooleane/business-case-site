@@ -8,7 +8,7 @@ import Dashboard from './pages/Dashboard.jsx'
 import CareerRecommendations from './pages/CareerRecommendations.jsx'
 import TrendTracker from './pages/TrendTracker.jsx'
 
-export default function Router() {
+export default function routes() {
 	return (
 		<BrowserRouter>
 			<Routes>
