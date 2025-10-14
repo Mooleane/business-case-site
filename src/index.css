@@ -121,6 +121,7 @@ a {
 .app-logo {
   display: flex;
   justify-content: center;
+  width: 40px;
 }
 
 /* Dashboard Navbar */
@@ -189,9 +190,12 @@ a {
 
 /* Homepage */
 .app-description {
-  width: min(70%, 1200px);
-  height: var(--card-height);
-  margin-left: var(--spacing-average);
+  font-size: clamp(32px, 4.8vw, 72px);
+  line-height: 1.03;
+  font-weight: 700;
+  margin: 0;
+  padding: 12px 16px;
+  max-width: min(95%, 900px);
 }
 
 .use-cases {
@@ -205,7 +209,132 @@ a {
   display: flex;
   margin-top: var(--spacing-medium);
   justify-content: center;
-  justify-items: center;
+}
+
+/* Get Started + FAQ (modernized) */
+.dual-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(12px, 3vw, 28px);
+  padding: 12px;
+  max-width: min(95%, 900px);
+  margin: 0 auto;
+}
+
+/* Each CTA is a thematic block (article/section). Keep them compact and centered */
+.dual-cta .cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  flex: 0 1 auto;
+  min-inline-size: 140px;
+}
+
+.cta-header {
+  margin: 0;
+  font-size: clamp(16px, 1.8vw, 20px);
+  font-weight: 700;
+  color: #07204a;
+  letter-spacing: -0.01em;
+}
+
+.divider {
+  appearance: none;
+  border: 0;
+  margin: 0 8px;
+  width: 0.25%;
+  height: 128px;
+  background: rgba(0,0,0,0.2);
+  border-radius: 1px;
+  flex: 0 0 auto;
+}
+
+.dual-cta .btn {
+  min-width: 160px;
+  text-align: center;
+  padding: 12px 20px;
+  font-size: clamp(15px, 2vw, 20px);
+}
+
+/* Content switcher (use-cases) */
+.switcher {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 16px;
+  box-sizing: border-box;
+  gap: 12px;
+}
+
+.switcher-frame {
+  position: relative;
+  flex: 1 1 auto;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.switcher-dots {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  padding: 6px 0 0 0;
+}
+
+.dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid rgba(0,0,0,0.12);
+  background: rgba(0,0,0,0.06);
+  cursor: pointer;
+  padding: 0;
+}
+
+.dot.active {
+  background: #0059ff;
+  border-color: #0047d1;
+  box-shadow: 0 4px 8px rgba(3,30,66,0.12);
+}
+
+.switcher-slide {
+  position: absolute;
+  inset: 0;
+  padding: 24px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 300ms ease, transform 300ms ease;
+}
+
+.switcher-slide.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.slide-title {
+  margin: 0;
+  font-size: clamp(18px, 2.6vw, 26px);
+  font-weight: 700;
+  color: #07204a;
+}
+
+.slide-body {
+  margin: 0;
+  max-width: 34rem;
+  color: #253251;
+  font-size: clamp(14px, 2.2vw, 16px);
+  line-height: 1.5;
 }
 
 /* Resources Page */
@@ -334,6 +463,71 @@ a {
   width: min(90%, 1200px);
   height: var(--card-height);
   margin-left: var(--spacing-average);
+}
+
+/* FAQ accordion */
+.faq {
+  padding: 24px;
+  max-width: "900px";
+  margin: "0 auto"; 
+}
+
+.faq-item {
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(3,30,66,0.04);
+  margin: 12px 0;
+}
+
+.faq-question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 14px 16px;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: left;
+}
+
+.faq-question:focus {
+  outline: 3px solid rgba(0,89,255,0.14);
+}
+
+.faq-question-text {
+  flex: 1 1 auto;
+}
+
+.faq-arrow {
+  margin-left: 12px;
+  transition: transform 220ms ease;
+  flex: 0 0 18px;
+  display: inline-block;
+}
+
+.faq-item.open .faq-arrow {
+  transform: rotate(90deg);
+}
+
+.faq-answer-wrapper {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 300ms ease, padding 300ms ease;
+  padding: 0 16px;
+}
+
+.faq-item.open .faq-answer-wrapper {
+  padding: 12px 16px 18px 16px;
+  max-height: 400px; /* enough for typical content; grows if needed */
+}
+
+.faq-answer {
+  color: #253251;
+  line-height: 1.5;
 }
 
 .trend-visualization {

@@ -1,13 +1,14 @@
+import career_nav_logo from "../assets/career_nav_logo.png"
 import profile_icon from "../assets/profile_icon.png"
 
 export default function Navbar() {
     return (
         <nav className="nav">
             <header className="nav-left">
-                <img src="" alt="app-logo" />
+                <img className = "app-logo" src={career_nav_logo} alt="app-logo" />
                 <ul className="bullet-text">
                     <li>
-                        <a className="app-text" href="/">App Name</a>
+                        <a className="app-text" href="/">CareerNav</a>
                     </li>
                         |
                     <li>
