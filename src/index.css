@@ -11,7 +11,13 @@ body {
   --spacing-average: 15px;
   --spacing-medium: 20px;
   --spacing-big: 30px;
-  --card-height: clamp(250px, 70vh, 600px);
+  --card-height: clamp(250px, 60vh, 600px);
+  --card-height-small: clamp(140px, 18vh, 220px);
+  --card-height-average: clamp(220px, 40vh, 420px);
+  --card-height-medium: clamp(300px, 50vh, 520px);
+  --card-height-big: clamp(360px, 65vh, 720px);
+  --card-height-bigger: clamp(520px, 80vh, 980px);
+  --card-height-banner: clamp(420px, 70vh, 820px);
 }
 
 a {
@@ -170,7 +176,7 @@ a {
   gap: var(--spacing-average);
   align-items: stretch;
   margin-bottom: 0;
-  padding-bottom: 0;
+  padding-bottom: 16px;
 }
 
 #container h1 {
@@ -200,7 +206,7 @@ a {
 
 .use-cases {
   width: min(30%, 600px);
-  height: var(--card-height);
+  height: var(--card-height-medium);
   margin-right: var(--spacing-average);
 
 }
@@ -222,7 +228,7 @@ a {
   margin: 0 auto;
 }
 
-/* Each CTA is a thematic block (article/section). Keep them compact and centered */
+/* Each CTA */
 .dual-cta .cta {
   display: flex;
   flex-direction: column;
@@ -274,8 +280,8 @@ a {
   border-radius: 8px;
   overflow: hidden;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
 
 .switcher-dots {
@@ -304,7 +310,6 @@ a {
 .switcher-slide {
   position: absolute;
   inset: 0;
-  padding: 24px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -324,7 +329,7 @@ a {
 
 .slide-title {
   margin: 0;
-  font-size: clamp(18px, 2.6vw, 26px);
+  font-size: clamp(18px, 2vw, 26px);
   font-weight: 700;
   color: #07204a;
 }
@@ -333,7 +338,7 @@ a {
   margin: 0;
   max-width: 34rem;
   color: #253251;
-  font-size: clamp(14px, 2.2vw, 16px);
+  font-size: clamp(12px, 1.6vw, 16px);
   line-height: 1.5;
 }
 
@@ -465,7 +470,7 @@ a {
   margin-left: var(--spacing-average);
 }
 
-/* FAQ accordion */
+/* FAQ */
 .faq {
   padding: 24px;
   max-width: "900px";
@@ -556,4 +561,9 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/* Smooth in-page scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
 }

@@ -1,6 +1,6 @@
 import Navbar from "../components/Navbar.jsx"
 import Description from "../components/Description.jsx"
-import GetStarted from "../components/GetStarted.jsx"
+import CallToAction from "../components/CallToAction.jsx"
 import FAQ from '../components/FAQList.jsx'
 
 export default function Home() {
@@ -9,7 +9,7 @@ export default function Home() {
       <Navbar />
       <Description />
       <hr />
-      <GetStarted />
+      <CallToAction />
       <hr />
       <FAQ />
     </>

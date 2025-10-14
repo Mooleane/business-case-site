@@ -1,4 +1,4 @@
-export default function GetStarted() {
+export default function CallToAction() {
     return (
             <section className="get-started dual-cta" aria-label="Primary actions">
                 <section className="cta">
