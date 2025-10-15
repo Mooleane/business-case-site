@@ -2,6 +2,7 @@ export default function ProfileSetup() {
     return (
         <section id="container">
             <section className="profile-setup">
+                <h2>Configure Profile</h2>
                 <form>
                     <p>
                         <label htmlFor="age">Age: </label>

@@ -25,7 +25,7 @@ export default function Navbar() {
                 <section className="profile-section">
                     <a className="btn btn-hover btn-small" href="Signup">Sign Up</a>
                     <a className="btn btn-hover btn-small" href="Login">Login</a>
-                    <a href="Profile">
+                    <a href="Settings">
                         <img className="profile-icon" src={profile_icon} alt="profile-icon" />
                     </a>
                 </section>

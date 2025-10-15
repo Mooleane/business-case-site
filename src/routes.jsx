@@ -7,6 +7,7 @@ import Profile from './pages/Profile.jsx'
 import Dashboard from './pages/Dashboard.jsx'
 import CareerRecommendations from './pages/CareerRecommendations.jsx'
 import TrendTracker from './pages/TrendTracker.jsx'
+import Settings from './pages/Settings.jsx'
 
 export default function routes() {
 	return (
@@ -20,6 +21,7 @@ export default function routes() {
 				<Route path="/Dashboard" element={<Dashboard />} />
 				<Route path="/Career-Recommendations" element={<CareerRecommendations />} />
 				<Route path="/Trend-Tracker" element={<TrendTracker />} />
+				<Route path="/Settings" element={<Settings />} />
 			</Routes>
 		</BrowserRouter>
 	)

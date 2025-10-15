@@ -13,11 +13,11 @@ body {
   --spacing-big: 30px;
   --card-height: clamp(250px, 60vh, 600px);
   --card-height-small: clamp(140px, 18vh, 220px);
-  --card-height-average: clamp(220px, 40vh, 420px);
-  --card-height-medium: clamp(300px, 50vh, 520px);
-  --card-height-big: clamp(360px, 65vh, 720px);
-  --card-height-bigger: clamp(520px, 80vh, 980px);
-  --card-height-banner: clamp(420px, 70vh, 820px);
+  --card-height-average: clamp(220px, 26vh, 300px);
+  --card-height-medium: clamp(300px, 34vh, 380px);
+  --card-height-big: clamp(500px, 52vh, 540px);
+  --card-height-bigger: clamp(520px, 55vh, 570px);
+  --card-height-banner: clamp(420px, 46vh, 580px);
 }
 
 a {
@@ -544,7 +544,12 @@ a {
 /* Profile Setup */
 .profile-setup {
   width: min(90%, 600px);
-  height: clamp(425px, 35vh, 475px);
+  height: var(--card-height-big);
+}
+
+.profile-setup h2 {
+  margin-bottom: var(--spacing-small);
+  text-align: center;
 }
 
 .profile-setup > form {
@@ -561,6 +566,113 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/* Settings Page */
+.settings-changer {
+  width: min(90%, 600px);
+  padding: var(--spacing-medium);
+}
+
+.settings-changer h2 {
+  margin-bottom: var(--spacing-small);
+  margin-top: 0;
+  text-align: center;
+}
+
+.settings-changer form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-medium);
+}
+
+.settings-field {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-small);
+  padding: var(--spacing-small) 0;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.settings-field label {
+  min-width: 100px;
+  font-weight: 500;
+}
+
+.settings-field input[type="text"],
+.settings-field input[type="email"],
+.settings-field input[type="password"] {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.settings-field span {
+  flex: 1;
+  padding: 8px;
+}
+
+.edit-btn, .verify-btn {
+  margin-left: var(--spacing-small);
+}
+
+.verify-btn {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+}
+
+/* Toggle Switch for Dark Mode */
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.toggle-slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .toggle-slider {
+  background-color: #0059ff;
+}
+
+input:checked + .toggle-slider:before {
+  transform: translateX(26px);
+}
+
+.settings-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: var(--spacing-medium);
 }
 
 /* Smooth in-page scrolling for anchor links */

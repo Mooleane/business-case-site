@@ -2,7 +2,7 @@ export default function CallToAction() {
     return (
             <section className="get-started dual-cta" aria-label="Primary actions">
                 <section className="cta">
-                    <h3 className="cta-header">First Time User?</h3>
+                    <h3 className="cta-header">First Time Here?</h3>
                     <a className="btn btn-hover btn-secondary" href="#faq">
                         FAQ
                     </a>
