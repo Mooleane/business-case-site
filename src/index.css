@@ -1,6 +1,8 @@
 /* Base Styles */
 body {
-  background-color: rgb(244, 247, 248);
+  background-image: url("https://static.vecteezy.com/system/resources/previews/006/399/020/non_2x/triangular-colorful-tiles-floor-seamless-pattern-ceramic-texture-background-seamless-tiling-pattern-colorful-ceramic-brick-wall-modern-design-with-soft-colors-vector.jpg");
+  background-repeat: repeat;
+  animation: scroll 100s linear infinite;
   font-family: 'Roboto', sans-serif;
   overflow-x: hidden;
   margin: 0;
@@ -18,6 +20,21 @@ body {
   --card-height-big: clamp(500px, 52vh, 540px);
   --card-height-bigger: clamp(520px, 55vh, 570px);
   --card-height-banner: clamp(420px, 46vh, 580px);
+}
+
+@keyframes scroll {
+  from { background-position: 0 0; }
+  to { background-position: -2000px 0; }
+}
+
+/* Page Wrapper */
+.page-content {
+  max-width: 1600px;
+  margin: 0 auto;
+  background-color: rgb(244, 247, 248);
+  opacity: 90%;
+  min-height: 100vh;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
 }
 
 a {
@@ -437,11 +454,29 @@ a {
   margin-left: var(--spacing-average);
 }
 
-.trending-skills,
+.trending-skills {
+  margin-right: var(--spacing-average);
+  width: min(90%, 600px);
+}
+
 .goals-deadlines {
   margin-right: var(--spacing-average);
   width: min(90%, 600px);
-  height: var(--card-height);
+}
+
+.goal-list {
+  padding: 0;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.goal-list ul {
+  margin-bottom: 25px
+}
+
+.text-within p, h1, h2, h3 {
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 /* Career Recommendations */

@@ -11,6 +11,7 @@ import Settings from './pages/Settings.jsx'
 
 export default function routes() {
 	return (
+		<div className="page-content">
 		<BrowserRouter>
 			<Routes>
 				<Route path="/" element={<Home />} />
@@ -24,5 +25,6 @@ export default function routes() {
 				<Route path="/Settings" element={<Settings />} />
 			</Routes>
 		</BrowserRouter>
+		</div>
 	)
 }
