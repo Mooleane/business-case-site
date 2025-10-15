@@ -72,7 +72,7 @@ export default function SettingsChanger() {
           </div>
 
           <div className="settings-field">
-            <span>Dark Mode:</span>
+            <label htmlFor="dark-mode">Dark Mode:</label>
             <div className="toggle-switch">
               <span className="toggle-slider"></span>
             </div>
