@@ -2,10 +2,10 @@
 body {
   background-image: url("https://static.vecteezy.com/system/resources/previews/006/399/020/non_2x/triangular-colorful-tiles-floor-seamless-pattern-ceramic-texture-background-seamless-tiling-pattern-colorful-ceramic-brick-wall-modern-design-with-soft-colors-vector.jpg");
   background-repeat: repeat;
-  animation: scroll 100s linear infinite;
+  animation: scroll 100s linear infinite alternate;
   font-family: 'Roboto', sans-serif;
   overflow-x: hidden;
-  margin: 0;
+  margin: 0 2.5% 0 2.5%;
   padding: 0;
 
   /* Variables */
@@ -32,7 +32,7 @@ body {
   max-width: 1600px;
   margin: 0 auto;
   background-color: rgb(244, 247, 248);
-  opacity: 90%;
+  opacity: 95%;
   min-height: 100vh;
   box-shadow: 0 0 20px rgba(0,0,0,0.5);
 }
