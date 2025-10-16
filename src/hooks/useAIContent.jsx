@@ -37,7 +37,7 @@ export function useAIContent() {
                     "trendingRoles" should be an array of objects, where each object has a "career" (datatype:string, career (but make sure the role you find is trending and relevant to the current date ${currentDate.toDateString()})) and a "skills" (datatype:string, skills (such as a description of general skills separated by commas, then hyperfocused skills)).
                     "goals" should be an array of objects, where each object has a "name" (datatype:string, goal) and a "date" (datatype:string, deadline (such as "August 5th, 2023" but be aware the current date is ${currentDate.toDateString()})).
                     "latestTrends" should be an array of objects, where each object has a "careerNews" (datatype:string, latest career news (give multiple news (reach for 3) and be aware the current date is ${currentDate.toDateString()})) and a "keyPoints" (datatype:string, main points about the career news (such as bullet points separated by commas)) and a "summary" (datatype:string, summary of the career news).
-                    "visualization" should be a string (datatype:string, image links (pulled from the latest career news such as statistics, graphs, etc)).
+                    "visualization" should be an array of objects, where each object is a "img" (datatype:string, real image links (do not use example.com, images should be pulled from the latest career news such as statistics, graphs, etc)).
                     `
                 }],
                 model: "gpt-4o-mini",
@@ -58,6 +58,6 @@ export function useAIContent() {
     useEffect(() => {
         getAICompletion();
     }, [getAICompletion]);
-
+    console.log(aiContent)
     return { aiContent, isLoading, error, refresh: () => getAICompletion(false) };
 }

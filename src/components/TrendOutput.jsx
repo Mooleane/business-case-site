@@ -29,6 +29,11 @@ export default function TrendOutput() {
 
                 <section className="trend-visualization">
                     <h1>Visualization</h1>
+                    {aiContent.latestTrends.map((stat, index) => (
+                        <>
+                            {aiContent && <img key={index} src={stat.img} alt="image failed to load"/>}
+                        </>
+                    ))}
                 </section>
 
             </section>
