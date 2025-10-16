@@ -1,4 +1,4 @@
-export default function DasboardNavbar() {
+export default function DasboardNavbar() {	
     return(
     	<nav className="dashboardnav">
       		<a className="btn btn-hover btn-secondary" href="Dashboard">Dashboard</a>

@@ -3,7 +3,7 @@ import { useAIContent } from '../hooks/useAIContent';
 
 export default function CareerOptionsList() {
     const [selectedCareer, setSelectedCareer] = useState(null);
-    const { aiContent, isLoading, error } = useAIContent();
+    const { aiContent, isLoading, error, refresh } = useAIContent();
 
     const handleCareerClick = (career) => {
         setSelectedCareer(career);
@@ -20,6 +20,8 @@ export default function CareerOptionsList() {
     return (
         <>
             <section id="container">
+
+                <button className="btn btn-primary" onClick={refresh}>Refresh AI Results</button>
                 
                 <section className="career-options text-within">
                     <ul className="list-text">
