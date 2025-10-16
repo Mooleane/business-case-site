@@ -27,18 +27,18 @@ export default function DashboardOutput() {
                     {aiContent?.trendingRoles && (
                         <ul className="goal-list">
                             {aiContent.trendingRoles.map((role, index) => (
-                                <ul className="btn btn-secondary" key={index}><strong>{role.career}:<br/></strong> {role.skills}</ul>
+                                <ul className="btn btn-small" key={index}><strong>{role.career}:<br/></strong> {role.skills}</ul>
                             ))}
                         </ul>
                     )}
                 </section>
-                
+
                 <section className="goals-deadlines">
                     <h1>Goals/Deadlines</h1>
                     {aiContent?.goals && (
                         <ul className="goal-list">
                             {aiContent.goals.map((goal, index) => (
-                                <ul className="btn btn-secondary" key={index}><strong>{goal.name}:<br/></strong> {goal.date}</ul>
+                                <ul className="btn btn-small" key={index}><strong>{goal.name}:<br/></strong> {goal.date}</ul>
                             ))}
                         </ul>
                     )}

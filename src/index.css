@@ -105,6 +105,11 @@ a {
   transform: scale(1.05);
 }
 
+.btn-hover:not(hover) {
+  transition: transform 0.1s ease;
+  transform: scale(1);
+}
+
 /* Main Navbar */
 .nav {
   display: flex;
