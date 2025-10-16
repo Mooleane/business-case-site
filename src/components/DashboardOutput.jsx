@@ -26,10 +26,10 @@ export default function DashboardOutput() {
             const completion = await openai.chat.completions.create({
                 messages: [{
                     role: "system", content: `
-                    You are a career advice assistant. Generate a JSON object with three keys: "personalizedAdvice", "trendingSkills", and "goals". 
-                    "personalizedAdvice" should be a string of personalized advice and resources. 
-                    "trendingRoles" should be an array of objects, where each object has a "career" (string career (such as "UX Designer")) and a "skills" (string skills (such as a description of general skills separated by commas, then hyperfocused skills)).
-                    "goals" should be an array of objects, where each object has a "name" (string task) and a "date" (string deadline (such as "August 5th, 2023" but be aware the current date is ${currentDate.toDateString()})).`
+                    You are a career advice assistant. Generate a JSON object with three keys: "personalizedAdvice", "trendingSkills", and "goals". Respond only with valid JSON. Do not include explanations, greetings, or markdown formatting. If any content outside the JSON is generated, reformat immediately into valid JSON only.
+                    "personalizedAdvice" should be a string (datatype:string, (containing personalized advice, and a batch of resources then colons after each resource followed by a link to the resource)). 
+                    "trendingRoles" should be an array of objects, where each object has a "career" (datatype:string, career (but make sure the role you find is trending and relevant to the current date ${currentDate.toDateString()})) and a "skills" (datatype:string, skills (such as a description of general skills separated by commas, then hyperfocused skills)).
+                    "goals" should be an array of objects, where each object has a "name" (datatype:string, goal) and a "date" (datatype:string, deadline (such as "August 5th, 2023" but be aware the current date is ${currentDate.toDateString()})).`
                 }],
                 model: "gpt-4o-mini",
                 response_format: { "type": "json_object" }
