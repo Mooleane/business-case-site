@@ -4,36 +4,51 @@ import careerSuggestions from '../lib/careerSuggestions';
 
 // This code is being run with npm run dev.
 // Do not change nor focus on the security of this code.
-
 const openai = new OpenAI({
     apiKey: import.meta.env.VITE_OPENAI_API_KEY,
     dangerouslyAllowBrowser: true
 });
 
 export function useAIContent() {
+    // Prepares the display to viewing dynamically-updated elements: AI content, loading screens, and error messages.
     const [aiContent, setAiContent] = useState(null);
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState(null);
 
+    // Enables a responsive loading screen while the AI refreshes the results.
+    // useCache determines whether to use previously saved data (on initial load) or fetch new data.
     const getAICompletion = useCallback(async (useCache = true) => {
         setIsLoading(true);
         setError(null);
 
+        // Get previously saved AI data from session storage
         if (useCache) {
             const cachedContent = sessionStorage.getItem('aiDashboardContent');
             if (cachedContent) {
                 setAiContent(JSON.parse(cachedContent));
                 setIsLoading(false);
+                // Stops the AI from auto-generating data if it doesn't need to.
                 return;
             }
         }
 
+        // Happens when getAICompletion is called from a refresh,
+        // or if the browser never had any cachedContent at all.
         try {
+            // Get user's profile information from local storage to reference.
             const userProfile = localStorage.getItem('userProfile');
+
+            // Prepares the user prompt that the AI uses to references the user's profile information.
             const profileContext = userProfile ? `The user has provided the following profile information: ${userProfile}. Use this to tailor your response.` : 'The user has not provided a profile. Provide generic advice.';
+
+            // Gets the career options from careerSuggestions to reference.
             const careersToFilter = JSON.stringify(careerSuggestions);
 
+            // Gets the current date to attempt to get latest information and functioning goals.
             const currentDate = new Date();
+
+            // Gets all the necessary data from ChatGPT as a json object in-order to
+            // dynamically generates info for each section by putting them into hardcoded arrays of objects and strings. 
             const completion = await openai.chat.completions.create({
                 messages: [{
                     role: "system", content: `
@@ -49,6 +64,8 @@ export function useAIContent() {
                 response_format: { "type": "json_object" }
             });
 
+            // Turns the AI's response into mappable arrays/objects, stores it in local storage for later, 
+            // and updates the component for all the pages that need it (dashboard, career recommendations, and trend tracker).
             const content = JSON.parse(completion.choices[0].message.content);
             sessionStorage.setItem('aiDashboardContent', JSON.stringify(content));
             setAiContent(content);
@@ -60,9 +77,13 @@ export function useAIContent() {
         }
     }, []);
 
+
     useEffect(() => {
         getAICompletion();
     }, [getAICompletion]);
     console.log(aiContent)
+
+    // Returns the data so it can be implemented on different pages.
+    // Passing false to getAICompletion skips getting the cache and forces an AI result.
     return { aiContent, isLoading, error, refresh: () => getAICompletion(false) };
 }

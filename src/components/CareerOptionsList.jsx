@@ -20,23 +20,28 @@ export default function CareerOptionsList() {
     return (
         <>
             <section id="container">
+                
                 <section className="career-options text-within">
                     <ul className="list-text">
                         {aiContent.matchedCareers.map((career, index) => (
-                            <li key={index} className="btn btn-hover btn-secondary" onClick={() => handleCareerClick(career)}>
+                            <li key={`career-${index}`} className="btn btn-hover btn-secondary" onClick={() => handleCareerClick(career)}>
                                 {career.title}
                             </li>
                         ))}
                     </ul>
                 </section>
+
                 <section className="chosen-career-summary text-within">
                     <h1>Summary</h1>
                     {selectedCareer ? (
                         <div>
                             <h2>{selectedCareer.title}</h2>
+
                             <p>{selectedCareer.description}</p>
+                            
                             <h3>Soft Skills</h3>
                             <p>{selectedCareer.softSkills.join(', ')}</p>
+
                             <h3>Hard Skills</h3>
                             <p>{selectedCareer.hardSkills.join(', ')}</p>
                         </div>
@@ -44,10 +49,12 @@ export default function CareerOptionsList() {
                         <p>Click on a career option to see details.</p>
                     )}
                 </section>
+
                 <section className="chosen-career-resources text-within">
                     <h1>Resources</h1>
                     {selectedCareer ? (
-                        <div>
+                        // Only shown when selectedCareer is not null; career has been chosen.
+                        <>
                             <ul className="list-text">
                                 {selectedCareer.resources.map((resource, index) => (
                                         <a key={index} href={resource.url} target="_blank" rel="noopener noreferrer">
@@ -55,11 +62,13 @@ export default function CareerOptionsList() {
                                         </a>
                                 ))}
                             </ul>
-                        </div>
+                        </>
                     ) : (
+                        // Only shown when selectedCareer is null; no chosen career.
                         <p>Click on a career option to see details.</p>
                     )}
                 </section>
+
             </section>
         </>
     )
