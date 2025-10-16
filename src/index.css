@@ -191,6 +191,10 @@ a {
   margin-top: var(--spacing-average);
 }
 
+.list-text a {
+  text-decoration: none;
+}
+
 /* Layout Containers */
 #container {
   display: flex;

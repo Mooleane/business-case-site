@@ -12,7 +12,6 @@ export default function CareerOptionsList() {
         <>
             <section id="container">
                 <section className="career-options text-within">
-                    <h2>Career Options</h2>
                     <ul className="list-text">
                         {careerSuggestions.map((career, index) => (
                             <li key={index} className="btn btn-hover btn-secondary" onClick={() => handleCareerClick(career)}>
@@ -38,6 +37,19 @@ export default function CareerOptionsList() {
                 </section>
                 <section className="chosen-career-resources text-within">
                     <h1>Resources</h1>
+                    {selectedCareer ? (
+                        <div>
+                            <ul className="list-text">
+                                {selectedCareer.resources.map((resource, index) => (
+                                        <a key={index} href={resource.url} target="_blank" rel="noopener noreferrer">
+                                            <li className="btn btn-hover btn-small">{resource.name}</li>
+                                        </a>
+                                ))}
+                            </ul>
+                        </div>
+                    ) : (
+                        <p>Click on a career option to see details.</p>
+                    )}
                 </section>
             </section>
         </>
