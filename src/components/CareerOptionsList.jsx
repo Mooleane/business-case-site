@@ -1,5 +1,4 @@
-import careers from "../lib/careers"
-
+import careerSuggestions from "../lib/careerSuggestions"
 
 export default function CareerOptionsList() {
     return (
@@ -7,8 +6,8 @@ export default function CareerOptionsList() {
             <section id="container">
                 <section className="career-options">
                     <ul className="list-text">
-                        {careers.map((career, index) => (
-                            <li key={index} className="btn btn-hover btn-secondary">{career}</li>
+                        {careerSuggestions.map((career, index) => (
+                            <li key={index} className="btn btn-hover btn-secondary">{career.title}</li>
                         ))}
                     </ul>
                 </section>

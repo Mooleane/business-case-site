@@ -1,5 +1,4 @@
-// careers.js
-export default careers = [
+const careerSuggestions = [
   {
     id: 1,
     title: "UX Designer",
@@ -401,3 +400,5 @@ export default careers = [
     hardSkills: ["navigation", "survival skills", "first aid", "safety protocols"]
   }
 ];
+
+export default careerSuggestions

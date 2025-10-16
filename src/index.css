@@ -552,19 +552,16 @@ a {
 /* Career Recommendations */
 .career-options {
   width: clamp(250px, 50vh, 350px);
-  height: var(--card-height);
   text-align: center;
 }
 
 .chosen-career-resources {
   width: clamp(250px, 50vh, 350px);
-  height: var(--card-height);
   text-align: center;
 }
 
 .chosen-career-listings {
   width: clamp(250px, 50vh, 350px);
-  height: var(--card-height);
   text-align: center;
 }
 
