@@ -560,7 +560,7 @@ a {
   text-align: center;
 }
 
-.chosen-career-listings {
+.chosen-career-summary {
   width: clamp(250px, 50vh, 350px);
   text-align: center;
 }
