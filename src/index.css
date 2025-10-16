@@ -100,6 +100,16 @@ a {
   font-size: clamp(12px, 2vw, 16px);
 }
 
+.btn-ai-refresh {
+  display: block;
+  margin: 0 auto;
+  margin-top: var(--spacing-small);
+  background-color: #0059ff;
+  color: rgb(255, 255, 255);
+  font-size: clamp(16px, 2vw, 20px);
+  height: 50px
+}
+
 .btn-hover:hover {
   transition: transform 0.1s ease;
   transform: scale(1.05);

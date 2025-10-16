@@ -1,4 +1,5 @@
 import { useAIContent } from '../hooks/useAIContent';
+import RefreshAI from './RefreshAI.jsx';
 
 export default function DashboardOutput() {
     const { aiContent, isLoading, error, refresh } = useAIContent();
@@ -13,9 +14,10 @@ export default function DashboardOutput() {
 
     return (
         <>
+                
+            <RefreshAI refresh={refresh} />
+        
             <section className="text-within" id="container">
-
-                <button className="btn btn-primary" onClick={refresh}>Refresh AI Results</button>
 
                 <section className="personalized-advice">
                     <h1>Personalized Advice/Resources</h1>

@@ -1,5 +1,6 @@
 import React from 'react'
 import { useAIContent } from '../hooks/useAIContent';
+import RefreshAI from './RefreshAI.jsx';
 
 export default function TrendOutput() {
     const { aiContent, isLoading, error, refresh } = useAIContent();
@@ -14,9 +15,10 @@ export default function TrendOutput() {
 
     return (
         <>
-            <section className="text-within" id="container">
+        
+            <RefreshAI refresh={refresh} />
 
-                <button className="btn btn-primary" onClick={refresh}>Refresh AI Results</button>
+            <section className="text-within" id="container">
 
                 <section className="trend-info">
                     <h1>Latest Career News/Keys Points/Summary</h1>

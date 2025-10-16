@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useAIContent } from '../hooks/useAIContent';
+import RefreshAI from './RefreshAI.jsx';
 
 export default function CareerOptionsList() {
     const [selectedCareer, setSelectedCareer] = useState(null);
@@ -19,10 +20,11 @@ export default function CareerOptionsList() {
 
     return (
         <>
+        
+            <RefreshAI refresh={refresh} />
+            
             <section id="container">
 
-                <button className="btn btn-primary" onClick={refresh}>Refresh AI Results</button>
-                
                 <section className="career-options text-within">
                     <ul className="list-text">
                         {aiContent.matchedCareers.map((career, index) => (
