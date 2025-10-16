@@ -1,3 +1,4 @@
+import React from 'react'
 import { useAIContent } from '../hooks/useAIContent';
 
 export default function TrendOutput() {
@@ -19,20 +20,18 @@ export default function TrendOutput() {
 
                 <section className="trend-info">
                     <h1>Latest Career News/Keys Points/Summary</h1>
-                    {aiContent.latestTrends.map((trend, index) => (
-                        <>
-                            <h3 key={index}><strong>News: {trend.careerNews}<br/></strong></h3>
-                            <p key={index}>KeyPoints: {trend.keyPoints}<br/><br/>Summary: {trend.summary}</p>
-                        </>
+                    {aiContent?.latestTrends?.map((trend, index) => (
+                        <React.Fragment key={`trend-${index}`}>
+                            <h3><strong>News: {trend.careerNews}<br/></strong></h3>
+                            <p>Key Points: {trend.keyPoints}<br/><br/>Summary: {trend.summary}</p>
+                        </React.Fragment>
                     ))}
                 </section>
 
                 <section className="trend-visualization">
-                    <h1>Visualization</h1>
-                    {aiContent.latestTrends.map((stat, index) => (
-                        <>
-                            {aiContent && <img key={index} src={stat.img} alt="image failed to load"/>}
-                        </>
+                    <h1>Statistics</h1>
+                    {aiContent?.data?.map((stat, index) => (
+                        <p key={`stat-${index}`}>{stat.statistic}<br/><br/></p>
                     ))}
                 </section>
 

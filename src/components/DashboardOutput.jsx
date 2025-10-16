@@ -27,7 +27,7 @@ export default function DashboardOutput() {
                     {aiContent?.trendingRoles && (
                         <ul className="goal-list">
                             {aiContent.trendingRoles.map((role, index) => (
-                                <ul className="btn btn-small" key={index}><strong>{role.career}:<br/></strong> {role.skills}</ul>
+                                <ul className="btn btn-small" key={`role-${index}`}><strong>{role.career}: <br/></strong>{role.skills}</ul>
                             ))}
                         </ul>
                     )}
@@ -38,7 +38,7 @@ export default function DashboardOutput() {
                     {aiContent?.goals && (
                         <ul className="goal-list">
                             {aiContent.goals.map((goal, index) => (
-                                <ul className="btn btn-small" key={index}><strong>{goal.name}:<br/></strong> {goal.date}</ul>
+                                <ul className="btn btn-small" key={`goal-${index}`}><strong>{goal.name}: <br/></strong>{goal.date}</ul>
                             ))}
                         </ul>
                     )}
