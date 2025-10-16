@@ -1,19 +1,28 @@
 import { useState } from 'react';
-import careerSuggestions from "../lib/careerSuggestions";
+import { useAIContent } from '../hooks/useAIContent';
 
 export default function CareerOptionsList() {
     const [selectedCareer, setSelectedCareer] = useState(null);
+    const { aiContent, isLoading, error } = useAIContent();
 
     const handleCareerClick = (career) => {
         setSelectedCareer(career);
     };
+
+    if (isLoading) {
+        return <p className="main-header">Generating your results...</p>;
+    }
+
+    if (error || !aiContent?.matchedCareers) {
+        return <p>Error loading career recommendations. Please try refreshing.</p>;
+    }
 
     return (
         <>
             <section id="container">
                 <section className="career-options text-within">
                     <ul className="list-text">
-                        {careerSuggestions.map((career, index) => (
+                        {aiContent.matchedCareers.map((career, index) => (
                             <li key={index} className="btn btn-hover btn-secondary" onClick={() => handleCareerClick(career)}>
                                 {career.title}
                             </li>
