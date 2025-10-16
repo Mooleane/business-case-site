@@ -22,6 +22,7 @@ export default function TrendOutput() {
 
                 <section className="trend-info">
                     <h1>Latest Career News/Keys Points/Summary</h1>
+                    <hr/>
                     {aiContent?.latestTrends?.map((trend, index) => (
                         <React.Fragment key={`trend-${index}`}>
                             <h3><strong>News: {trend.careerNews}<br/></strong></h3>
@@ -32,6 +33,7 @@ export default function TrendOutput() {
 
                 <section className="trend-visualization">
                     <h1>Statistics</h1>
+                    <hr/>
                     {aiContent?.data?.map((stat, index) => (
                         <p key={`stat-${index}`}>{stat.statistic}<br/><br/></p>
                     ))}

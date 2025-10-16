@@ -22,10 +22,12 @@ export default function CareerOptionsList() {
         <>
         
             <RefreshAI refresh={refresh} />
-            
+
             <section id="container">
 
                 <section className="career-options text-within">
+                    <h1>Career Suggestions</h1>
+                    <hr/>
                     <ul className="list-text">
                         {aiContent.matchedCareers.map((career, index) => (
                             <li key={`career-${index}`} className="btn btn-hover btn-secondary" onClick={() => handleCareerClick(career)}>
@@ -37,6 +39,7 @@ export default function CareerOptionsList() {
 
                 <section className="chosen-career-summary text-within">
                     <h1>Summary</h1>
+                    <hr/>
                     {selectedCareer ? (
                         <div>
                             <h2>{selectedCareer.title}</h2>
@@ -56,6 +59,7 @@ export default function CareerOptionsList() {
 
                 <section className="chosen-career-resources text-within">
                     <h1>Resources</h1>
+                    <hr/>
                     {selectedCareer ? (
                         // Only shown when selectedCareer is not null; career has been chosen.
                         <>

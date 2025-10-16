@@ -548,16 +548,6 @@ a {
   width: min(90%, 600px);
 }
 
-.goal-list {
-  padding: 0;
-  margin-left: 25px;
-  margin-right: 25px;
-}
-
-.goal-list ul {
-  margin-bottom: 25px
-}
-
 .text-within p, h1, h2, h3 {
   padding-left: 10px;
   padding-right: 10px;

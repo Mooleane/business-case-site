@@ -21,15 +21,17 @@ export default function DashboardOutput() {
 
                 <section className="personalized-advice">
                     <h1>Personalized Advice/Resources</h1>
+                    <hr/>
                     {aiContent && <p>{aiContent.personalizedAdvice}</p>}
                 </section>
 
                 <section className="trending-skills">
                     <h1>Trending Skills/Roles</h1>
+                    <hr/>
                     {aiContent?.trendingRoles && (
-                        <ul className="goal-list">
+                        <ul className="list-text">
                             {aiContent.trendingRoles.map((role, index) => (
-                                <ul className="btn btn-small" key={`role-${index}`}><strong>{role.career}: <br/></strong>{role.skills}</ul>
+                                <li className="btn btn-small" key={`role-${index}`}><strong>{role.career}: <br/></strong>{role.skills}</li>
                             ))}
                         </ul>
                     )}
@@ -37,10 +39,11 @@ export default function DashboardOutput() {
 
                 <section className="goals-deadlines">
                     <h1>Goals/Deadlines</h1>
+                    <hr/>
                     {aiContent?.goals && (
-                        <ul className="goal-list">
+                        <ul className="list-text">
                             {aiContent.goals.map((goal, index) => (
-                                <ul className="btn btn-small" key={`goal-${index}`}><strong>{goal.name}: <br/></strong>{goal.date}</ul>
+                                <li className="btn btn-small" key={`goal-${index}`}><strong>{goal.name}: <br/></strong>{goal.date}</li>
                             ))}
                         </ul>
                     )}
