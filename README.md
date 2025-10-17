@@ -3,7 +3,7 @@
 # Documentation
 ## About
 
-CareerNav is a web application designed to assist users in navigating their career paths. It provides tools for career advice, trend analysis, and resource discovery. The application uses AI to provide personalized career suggestions and insights.
+CareerNav is a react application designed to assist users in navigating their career paths. It provides tools for career advice, trend analysis, and resource discovery. The website uses AI to provide personalized career suggestions and insights.
 
 ## User Documentation
 
