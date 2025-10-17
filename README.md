@@ -1,6 +1,6 @@
 # CareerNav
 
-# CareerNav Documentation
+# Documentation
 ## About
 
 CareerNav is a web application designed to assist users in navigating their career paths. It provides tools for career advice, trend analysis, and resource discovery. The application uses AI to provide personalized career suggestions and insights.
