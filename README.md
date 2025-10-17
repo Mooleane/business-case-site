@@ -7,7 +7,7 @@ CareerNav is a web application designed to assist users in navigating their care
 
 ## User Documentation
 
-Users can create an account and set up a profile with their skills, interests, and work preferences. Based on this information, the application provides personalized career recommendations.
+Users can create an account and set up a profile with their hobbies and work preferences. Based on this information, the application provides personalized career recommendations.
 
 The main features include:
 
