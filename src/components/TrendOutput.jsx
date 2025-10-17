@@ -31,7 +31,7 @@ export default function TrendOutput() {
                     ))}
                 </section>
 
-                <section className="trend-visualization">
+                <section className="trend-statistics">
                     <h1>Statistics</h1>
                     <hr/>
                     {aiContent?.data?.map((stat, index) => (

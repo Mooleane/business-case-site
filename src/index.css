@@ -27,6 +27,74 @@ body {
   to { background-position: -2000px 0; }
 }
 
+@keyframes spin {
+  0% {
+    transform: rotateX(0deg);
+  }
+  100% {
+    transform: rotateX(-360deg);
+  }
+}
+
+@keyframes slide-in-left {
+  0% {
+    transform: translateX(400px);
+    opacity: 0%;
+  }
+  60% {
+    transform: translateX(-25px);
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 100%;
+  }
+}
+
+@keyframes open {
+  0% {
+    transform: scale(-1, 1);
+    color: white;
+  }
+  33% {
+    color: white;
+  }
+  34% {
+    color: unset;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes open-color {
+  0% {
+    color: white;
+  }
+  33% {
+    color: white;
+  }
+  34% {
+    color: unset;
+  }
+  100% {
+  }
+  
+}
+
+@keyframes slide-from-bottom {
+  0% {
+    opacity: 0%;
+    transform: translateY(100%);
+  }
+  60% {
+    transform: translateY(-2.5%);
+  }
+  100% {
+    opacity: 100%;
+    transform: translateY(0%);
+  }
+}
+
 /* Page Wrapper */
 .page-content {
   max-width: 1600px;
@@ -160,6 +228,7 @@ a {
   display: flex;
   justify-content: center;
   width: 40px;
+  animation: spin 3.6s linear infinite;
 }
 
 /* Dashboard Navbar */
@@ -238,13 +307,13 @@ a {
   margin: 0;
   padding: 12px 16px;
   max-width: min(95%, 900px);
+  animation: slide-in-left 0.6s ease-out forwards;
 }
 
 .use-cases {
   width: min(30%, 600px);
   height: var(--card-height-medium);
   margin-right: var(--spacing-average);
-
 }
 
 .get-started {
@@ -536,17 +605,26 @@ a {
 .personalized-advice {
   width: min(90%, 1200px);
   margin-left: var(--spacing-average);
+  transform: translateY(100vh);
+  animation: slide-from-bottom 0.6s ease-out forwards;
 }
 
 .trending-skills {
   margin-right: var(--spacing-average);
   width: min(90%, 600px);
+  transform: translateY(100vh);
+  animation: slide-from-bottom 0.6s ease-out forwards;
+  animation-delay: 0.1s;
 }
 
 .goals-deadlines {
   margin-right: var(--spacing-average);
   width: min(90%, 600px);
+  transform: translateY(100vh);
+  animation: slide-from-bottom 0.6s ease-out forwards;
+  animation-delay: 0.2s;
 }
+
 
 .text-within p, h1, h2, h3 {
   padding-left: 10px;
@@ -557,27 +635,40 @@ a {
 .career-options {
   width: clamp(250px, 50vh, 350px);
   text-align: center;
-}
-
-.chosen-career-resources {
-  width: clamp(250px, 50vh, 350px);
-  text-align: center;
+  transform: translateY(100vh);
+  animation: slide-from-bottom 0.6s ease-out forwards;
 }
 
 .chosen-career-summary {
   width: clamp(250px, 50vh, 350px);
   text-align: center;
+  transform: translateY(100vh);
+  animation: slide-from-bottom 0.6s ease-out forwards;
+  animation-delay: 0.1s;
+}
+
+.chosen-career-resources {
+  width: clamp(250px, 50vh, 350px);
+  text-align: center;
+  transform: translateY(100vh);
+  animation: slide-from-bottom 0.6s ease-out forwards;
+  animation-delay: 0.2s;
 }
 
 /* Trend Tracker */
 .trend-info {
   width: min(90%, 1200px);
   margin-left: var(--spacing-average);
+  transform: translateY(100vh);
+  animation: slide-from-bottom 0.6s ease-out forwards;
 }
 
-.trend-visualization {
+.trend-statistics {
   width: min(90%, 600px);
   margin-right: var(--spacing-average);
+  transform: translateY(100vh);
+  animation: slide-from-bottom 0.6s ease-out forwards;
+  animation-delay: 0.1s;
 }
 
 /* Profile Setup */
