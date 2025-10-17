@@ -48,8 +48,7 @@ This project has some missing functionality to its elements.
 
 *   **Authentication:** Signup and Login functionality are not implemented.
 *   **Core Features:**
-    *   Dashboard: Basic layout is in place.
     *   Trend Tracker: The AI functionality works, but is limited to an older date due to it's usage of gpt-4o-mini.
-    *   Resources: The buttons do not currently link to resources.
+    *   Resources: The buttons on this page do not currently link to resources.
 *   **Settings:** Settings page is a placeholder due to unsaved inputs + Dark Mode is not yet implemented to work.
 *   **Styling:** The overall styling may be worked on more in the future.
