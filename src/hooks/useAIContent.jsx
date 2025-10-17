@@ -77,8 +77,7 @@
                     },
                     {
                         role: "system",
-                        content: `
-                        You are a career advice assistant. ${profileContext} Given the following list of careers: ${careersToFilter}. Generate a JSON object with four keys: "personalizedAdvice", "trendingRoles", "goals", and "matchedCareers". Respond only with valid JSON. Do not include explanations, greetings, or markdown formatting.
+                        content: `You are a career advice assistant. ${profileContext} Given the following list of careers: ${careersToFilter}. Generate a JSON object with four keys: "personalizedAdvice", "trendingRoles", "goals", and "matchedCareers". Respond only with valid JSON. Do not include explanations, greetings, or markdown formatting.
                         "personalizedAdvice" should be a string (datatype:string, (containing personalized advice, and a batch of resources then colons after each resource followed by a link to the resource)). 
                         "trendingRoles" should be an array of objects, where each object has a "career" (datatype:string, career (but make sure the role you find is trending and relevant to the current date ${currentDate.toDateString()})), and a "skills" (datatype:string, skills (such as a description of general skills separated by commas, then hyperfocused skills)).
                         "goals" should be an array of objects, where each object has a "name" (datatype:string, goal) and a "date" (datatype:string, deadline (such as "August 5th, 2023" but be aware the current date is ${currentDate.toDateString()})).
@@ -89,7 +88,7 @@
                     },
                     ],
                     temperature: 0,
-                    max_tokens: 500,
+                    max_tokens: 3000,
                 })
                 });
 
@@ -110,31 +109,9 @@
 
                 // Turns the AI's response into mappable arrays/objects, stores it in local storage for later, 
                 // and updates the component for all the pages that need it (dashboard, career recommendations, and trend tracker).
+
                 const result = await completion.json();
-                const rawMessage = result?.choices?.[0]?.message?.content;
-                console.log("RAW AI RESPONSE:", rawMessage);
-
-                if (!rawMessage || typeof rawMessage !== "string") {
-                setError(new Error("Invalid AI response"));
-                setIsLoading(false);
-                return;
-                }
-
-                let safeResponse = rawMessage.trim();
-                if (safeResponse.startsWith("```")) {
-                safeResponse = safeResponse.replace(/```(json)?/g, "").trim();
-                }
-
-                let content;
-                try {
-                content = JSON.parse(safeResponse);
-                } catch (e) {
-                console.error("Failed to parse AI JSON:", e);
-                setError(new Error("Failed to parse AI response"));
-                setIsLoading(false);
-                return;
-                }
-
+                const content = JSON.parse(result.choices[0].message.content);
                 sessionStorage.setItem('aiDashboardContent', JSON.stringify(content));
                 setAiContent(content);
             } catch (err) {
