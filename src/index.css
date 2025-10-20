@@ -215,6 +215,12 @@ a {
   justify-content: center;
 }
 
+.settings-icon {
+  display: flex;
+  width: 35px;
+  justify-content: center;
+}
+
 .app-logo {
   display: flex;
   justify-content: center;

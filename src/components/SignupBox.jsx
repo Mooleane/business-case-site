@@ -1,4 +1,5 @@
 import FillerBox from "./FillerBox"
+import { Link } from "react-router-dom";
 
 export default function SignupBox() {
     return (
@@ -28,8 +29,8 @@ export default function SignupBox() {
                             type="checkbox"
                             name="TOS"
                         />
-                        <label for="TOS">I agree to the </label>
-                        <a for="TOS" href="tos">Terms of Service</a>
+                        <label>I agree to the </label>
+                        <a href="terms-of-service">Terms of Service</a>
                         <a>.</a>
                         <a href="Profile">
                             <button className="btn btn-hover btn-inbetween">Sign Up</button>
