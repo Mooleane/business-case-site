@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 export default function SettingsChanger() {
@@ -12,6 +12,14 @@ export default function SettingsChanger() {
   const [editingPassword, setEditingPassword] = useState(false);
 
   const navigate = useNavigate();
+
+  useEffect(() => {
+    if (darkMode) {
+      document.body.classList.add('dark-mode');
+    } else {
+      document.body.classList.remove('dark-mode');
+    }
+  }, [darkMode]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -72,11 +80,12 @@ export default function SettingsChanger() {
           </div>
 
           <div className="settings-field">
-            <label htmlFor="dark-mode">Dark Mode:</label>
-            <div className="toggle-switch">
-              <span className="toggle-slider"></span>
-            </div>
-          </div>
+          <label htmlFor="dark-mode">Dark Mode:</label>
+          <label className="toggle-switch">
+            <input type="checkbox" id="dark-mode" checked={darkMode} onChange={() => setDarkMode(!darkMode)} />
+            <span className="toggle-slider"></span>
+          </label>
+        </div>
 
           <div className="settings-actions">
             <button type="submit" className="btn btn-hover btn-secondary">Save</button>
