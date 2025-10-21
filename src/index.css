@@ -24,7 +24,7 @@ body {
 
 @keyframes scroll {
   from { background-position: 0 0; }
-  to { background-position: -980px 0; }
+  to { background-position: -1960px 0; }
 }
 
 @keyframes slide-in-left {
