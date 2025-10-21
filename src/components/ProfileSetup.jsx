@@ -8,7 +8,6 @@ export default function ProfileSetup() {
         hobbies: '',
         work: ''
     });
-    const [message, setMessage] = useState('');
 
     useEffect(() => {
         const savedProfile = localStorage.getItem('userProfile');
@@ -28,15 +27,13 @@ export default function ProfileSetup() {
     const handleSubmit = (e) => {
         e.preventDefault();
         localStorage.setItem('userProfile', JSON.stringify(profile));
-        setMessage('Profile saved successfully!');
-        setTimeout(() => setMessage(''), 3000); // Clear message after 3 seconds
     };
 
     return (
         <section id="container">
             <section className="profile-setup">
                 <h2>Configure Profile</h2>
-                {message && <p className="success-message">{message}</p>}
+                <hr />
                 <form onSubmit={handleSubmit}>
                     <p>
                         <label htmlFor="age">Age: </label>
