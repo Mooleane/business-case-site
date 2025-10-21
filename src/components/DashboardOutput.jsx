@@ -25,8 +25,8 @@ export default function DashboardOutput() {
                     {aiContent && <p>{aiContent.personalizedAdvice}</p>}
                 </section>
 
-                <section className="trending-skills">
-                    <h1>Trending Skills/Roles</h1>
+                <section className="trending-roles">
+                    <h1>Trending Roles/Skills</h1>
                     <hr/>
                     {aiContent?.trendingRoles && (
                         <ul className="list-text">
