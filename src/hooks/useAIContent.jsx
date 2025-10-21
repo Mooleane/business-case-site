@@ -13,9 +13,9 @@
             setIsLoading(true);
             setError(null);
 
-            // Get previously saved AI data from session storage
+            // Get previously saved AI data from local storage
             if (useCache) {
-                const cachedContent = sessionStorage.getItem('aiDashboardContent');
+                const cachedContent = localStorage.getItem('aiDashboardContent');
                 if (cachedContent) {
                     setAiContent(JSON.parse(cachedContent));
                     setIsLoading(false);
@@ -113,7 +113,7 @@
 
                 const result = await completion.json();
                 const content = JSON.parse(result.choices[0].message.content);
-                sessionStorage.setItem('aiDashboardContent', JSON.stringify(content));
+                localStorage.setItem('aiDashboardContent', JSON.stringify(content));
                 setAiContent(content);
             } catch (err) {
                 console.error("Error fetching AI completion:", err);

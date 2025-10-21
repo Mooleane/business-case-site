@@ -510,6 +510,7 @@ a {
 
 /* Resources Page */
 .resources {
+  height: var(--card-height-medium);
   transform: translateY(100vh);
   animation: slide-from-bottom 0.6s ease-out forwards;
 }
