@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 export default function SettingsChanger() {
   return (
     <section id="container">
@@ -34,7 +36,7 @@ export default function SettingsChanger() {
 
         <section className="settings-actions">
           <button type="button" className="btn btn-hover btn-secondary">Save</button>
-          <a type="button" className="btn btn-hover btn-secondary" href="Profile">Configure Profile</a>
+          <Link to="/Profile" className="btn btn-hover btn-secondary">Configure Profile</Link>
         </section>
       </section>
     </section>

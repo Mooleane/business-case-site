@@ -1,9 +1,11 @@
+import { Link } from "react-router-dom"
+
 export default function DasboardNavbar() {	
     return(
     	<nav className="dashboardnav">
-      		<a className="btn btn-hover btn-secondary" href="Dashboard">Dashboard</a>
-      		<a className="btn btn-hover btn-secondary" href="Career-Recommendations">Career Recommendations</a>
-      		<a className="btn btn-hover btn-secondary" href="Trend-Tracker">Trend Tracker</a>
+      		<Link to="/Dashboard" className="btn btn-hover btn-secondary">Dashboard</Link>
+      		<Link to="/Career-Recommendations" className="btn btn-hover btn-secondary">Career Recommendations</Link>
+      		<Link to="/Trend-Tracker" className="btn btn-hover btn-secondary">Trend Tracker</Link>
     	</nav>
     )
 }

@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 export default function LoginBox() {
     return (
         <>
@@ -12,13 +14,13 @@ export default function LoginBox() {
                             type="text"
                             placeholder="Password"
                         />
-                        <a href="Dashboard">
-                            <button className="btn btn-hover btn-inbetween">Login</button>
-                        </a>
+                        <br/>
+                        <br/>
+                        <Link to="/Dashboard" className="btn btn-hover btn-inbetween">Login</Link>
                     </form>
-                    <a href="Signup"><br/>Create an Account</a>
+                    <br/>
+                    <Link to="/Signup">Sign up instead?</Link>
                 </section>
-
             </section>
         </>
     )

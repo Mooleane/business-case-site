@@ -1,5 +1,5 @@
 import FillerBox from "./FillerBox"
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom"
 
 export default function SignupBox() {
     return (
@@ -30,13 +30,14 @@ export default function SignupBox() {
                             name="TOS"
                         />
                         <label>I agree to the </label>
-                        <a href="terms-of-service">Terms of Service</a>
+                        <Link to="/terms-of-service">Terms of Service</Link>
                         <a>.</a>
-                        <a href="Profile">
-                            <button className="btn btn-hover btn-inbetween">Sign Up</button>
-                        </a>
+                        <br/>
+                        <br/>
+                        <Link to="/Profile" className="btn btn-hover btn-inbetween">Sign Up</Link>
                     </form>
-                    <a href="Login"><br/>Login instead?</a>
+                    <br/>
+                    <Link to="/Login">Login instead?</Link>
                 </section>
                 <FillerBox />
             </section>

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import career_nav_logo from "../assets/career_nav_logo.png"
 import profile_icon from "../assets/profile_icon.png"
 import settings_icon from "../assets/settings_icon.png"
@@ -9,29 +10,29 @@ export default function Navbar() {
                 <img className = "app-logo" src={career_nav_logo} alt="app-logo" />
                 <ul className="bullet-text">
                     <li>
-                        <a className="app-text" href="/">CareerNav</a>
+                        <Link to="/">CareerNav</Link>
                     </li>
                         |
                     <li>
-                        <a href="Resources">Resources</a>
+                        <Link to="/Resources">Resources</Link>
                     </li>
                         |
                     <li>
-                        <a href="Dashboard">Dashboard</a>
+                        <Link to="/Dashboard">Dashboard</Link>
                     </li>
                 </ul>
             </header>
 
             <aside className="nav-right">
                 <section className="profile-section">
-                    <a className="btn btn-hover btn-small" href="Signup">Sign Up</a>
-                    <a className="btn btn-hover btn-small" href="Login">Login</a>
-                    <a href="Profile">
+                    <Link to="/Signup"className="btn btn-hover btn-small">Sign Up</Link>
+                    <Link to="/Login"className="btn btn-hover btn-small">Login</Link>
+                    <Link to="/Profile">
                         <img className="profile-icon" src={profile_icon} alt="profile-icon" />
-                    </a>
-                    <a href="Settings">
+                    </Link>
+                    <Link to="/Settings">
                         <img className="settings-icon" src={settings_icon} alt="settings-icon" />
-                    </a>
+                    </Link>
                 </section>
             </aside>
         </nav>
