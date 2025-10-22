@@ -1,6 +1,9 @@
+import { useNavigate } from "react-router-dom"
 import { useState, useEffect } from 'react';
 
 export default function ProfileSetup() {
+    const navigate = useNavigate();
+    
     const [profile, setProfile] = useState({
         age: '',
         country: '',
@@ -16,6 +19,7 @@ export default function ProfileSetup() {
         }
     }, []);
 
+    // Replaces the old profile info with the new profile info
     const handleChange = (e) => {
         const { name, value } = e.target;
         setProfile(prevProfile => ({
@@ -24,9 +28,11 @@ export default function ProfileSetup() {
         }));
     };
 
+    // Saves the profile info to local storage
     const handleSubmit = (e) => {
         e.preventDefault();
         localStorage.setItem('userProfile', JSON.stringify(profile));
+        navigate("/Dashboard");
     };
 
     return (

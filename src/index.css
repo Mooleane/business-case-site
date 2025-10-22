@@ -570,6 +570,8 @@ a {
   width: clamp(250px, 50vh, 350px);
   height: 500px;
   text-align: center;
+  transform: translateY(100vh);
+  animation: slide-from-bottom 0.6s ease-out forwards;
 }
 
 .signup-box form {
@@ -593,6 +595,8 @@ a {
   width: clamp(250px, 50vh, 350px);
   height: 300px;
   text-align: center;
+  transform: translateY(100vh);
+  animation: slide-from-bottom 0.6s ease-out forwards;
 }
 
 .login-box form {
@@ -623,6 +627,9 @@ a {
   width: min(55%, 700px);
   height: clamp(250px, 400px);
   text-align: center;
+  transform: translateY(100vh);
+  animation: slide-from-bottom 0.6s ease-out forwards;
+  animation-delay: 0.1s;
 }
 
 /* Dashboard */
@@ -705,7 +712,9 @@ a {
 .profile-setup {
   width: min(90%, 600px);
   height: var(--card-height-big);
-  padding: var(--spacing-average)
+  padding: var(--spacing-average);
+  transform: translateY(100vh);
+  animation: slide-from-bottom 0.6s ease-out forwards;
 }
 
 .profile-setup h2 {
@@ -731,6 +740,8 @@ a {
 .settings-changer {
   width: min(90%, 600px);
   padding: var(--spacing-medium);
+  transform: translateY(100vh);
+  animation: slide-from-bottom 0.6s ease-out forwards;
 }
 
 .settings-changer h2 {

@@ -1,5 +1,5 @@
-import FillerBox from "./FillerBox"
 import { Link } from "react-router-dom"
+import FillerBox from "./FillerBox"
 
 export default function SignupBox() {
     return (
