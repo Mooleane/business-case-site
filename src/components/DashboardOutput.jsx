@@ -1,3 +1,4 @@
+import React from 'react'
 import { useAIContent } from '../hooks/useAIContent';
 import RefreshAI from './RefreshAI.jsx';
 
@@ -22,7 +23,21 @@ export default function DashboardOutput() {
                 <section className="personalized-advice">
                     <h1>Personalized Advice/Resources</h1>
                     <hr/>
-                    {aiContent && <p>{aiContent.personalizedAdvice}</p>}
+                    <ul className="list-text">
+                        <React.Fragment>
+                            <strong>Advice: </strong>
+                            {aiContent.personalizedAdvice.map((personalized, index) => (
+                                <li key={`advice-${index}`}>{personalized.advice}</li>
+                            ))}
+                            <br/>
+                            <strong>Resources: </strong>
+                            {aiContent.personalizedAdvice[0].resources.map((resource, index) => (
+                                <a key={`resources-${index}`} href={resource.url} target="_blank" rel="noopener noreferrer">
+                                    <li className="btn btn-hover btn-small" >{resource.name}</li>
+                                </a>
+                            ))}
+                        </React.Fragment>
+                    </ul>
                 </section>
 
                 <section className="trending-roles">

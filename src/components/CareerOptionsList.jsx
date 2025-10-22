@@ -65,9 +65,9 @@ export default function CareerOptionsList() {
                         <>
                             <ul className="list-text">
                                 {selectedCareer.resources.map((resource, index) => (
-                                        <a key={index} href={resource.url} target="_blank" rel="noopener noreferrer">
-                                            <li className="btn btn-hover btn-small">{resource.name}</li>
-                                        </a>
+                                    <a key={index} href={resource.url} target="_blank" rel="noopener noreferrer">
+                                        <li className="btn btn-hover btn-small">{resource.name}</li>
+                                    </a>
                                 ))}
                             </ul>
                         </>
