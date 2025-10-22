@@ -8,7 +8,7 @@ export default function SignupBox() {
                 <section className="signup-box">
                     <form>
                         <input className="btn btn-secondary" 
-                            type="text"
+                            type="email"
                             placeholder="Email"
                         />
                         <input className="btn btn-secondary"
@@ -16,11 +16,11 @@ export default function SignupBox() {
                             placeholder="Username"
                         />
                         <input className="btn btn-secondary"
-                            type="text"
+                            type="password"
                             placeholder="Password"
                         />
                         <input className="btn btn-secondary"
-                            type="text"
+                            type="password"
                             placeholder="Confirm Password"
                         />
                     </form>
