@@ -18,7 +18,11 @@ const faqData = [
   {
     question: "What kind of career resources are available on the platform?",
     answer: "A human-curated and ai-curated list of resources are provided, including articles, online courses, and networking opportunities, to help you advance in your chosen career path."
-  }
+  },
+  {
+    question: "Why do the settings not change?",
+    answer: "The settings are currently skipped for demonstration purposes.",
+  },
 ];
 
 export default faqData;

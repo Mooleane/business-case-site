@@ -20,6 +20,10 @@ export default function Navbar() {
                     <li>
                         <Link to="/Dashboard">Dashboard</Link>
                     </li>
+                        |
+                    <li>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdXFfzm3KJF-U-vhzD9H3LTYx7cuCiywwXSg0-gyf7bvH1xRQ/viewform?usp=header" target="_blank" rel="noopener noreferrer">The Survey</a>
+                    </li>
                 </ul>
             </header>
 

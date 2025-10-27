@@ -4,7 +4,7 @@ export default function SettingsChanger() {
   return (
     <section id="container">
       <section className="settings-changer">
-        <h2>Settings</h2>
+        <h2>Settings -currently fake-</h2>
         <hr/>
 
         <section className="settings-field">
@@ -29,7 +29,7 @@ export default function SettingsChanger() {
         <section className="settings-field">
           <label for="dark-mode">Dark Mode:</label>
           <section className="toggle-switch">
-            <input type="checkbox" id="dark-mode"/>
+            <input id="dark-mode"/>
             <span className="toggle-slider"></span>
           </section>
         </section>
