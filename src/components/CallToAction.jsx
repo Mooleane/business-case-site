@@ -14,7 +14,7 @@ export default function CallToAction() {
 
                 <section className="cta">
                     <h3 className="cta-header">Feeling Ready?</h3>
-                    <Link to="/Signup" className="btn btn-hover btn-primary">Get Started</Link>
+                    <Link to="/Dashboard" className="btn btn-hover btn-primary">Get Started</Link>
                 </section>
             </section>
     );
