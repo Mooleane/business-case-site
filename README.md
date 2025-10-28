@@ -1,15 +1,20 @@
 # CareerNav
 
-# Documentation
-## About
+An AI-powered React app designed to assist users in navigating their career paths.
 
-CareerNav is a react application designed to assist users in navigating their career paths. It provides tools for career advice, trend analysis, and resource discovery. The website uses AI to provide personalized career suggestions and insights.
+It provides tools for:
+* **Career Advice**
+* **Goal Setting**
+* **Skill Alignment**
+* **Career Suggestions**
+* **Resource Discovery**
+* **News Summaries**
+* **Statistics**
 
-## User Documentation
+Users can create an account and set up a profile with their hobbies and work preferences. <br>
+Based on this information, the app personalizes details across different sections.
 
-Users can create an account and set up a profile with their hobbies and work preferences. Based on this information, the application provides personalized career recommendations.
-
-The main features include:
+The main sections include:
 
 *   **Dashboard:** A navigation area for users to access most of the features and get general insights.
 *   **Career Recommendations:** AI-curated career suggestions for potential career paths.
@@ -48,7 +53,6 @@ This project has some missing functionality to its elements.
 
 *   **Authentication:** Signup and Login functionality are not implemented.
 *   **Core Features:**
-    *   Trend Tracker: The AI functionality works, but is limited to an older date due to it's usage of gpt-4o-mini.
-    *   Resources: The buttons on this page do not currently link to resources.
-*   **Settings:** Settings page is a placeholder due to unsaved inputs + Dark Mode is not yet implemented to work.
+    *   Trend Tracker: The AI functionality works, but is limited to an October 2023 due to it's usage of gpt-4o-mini.
+*   **Settings:** Settings page is a placeholder (inaccessible) due to unsaved inputs + Dark Mode is not yet implemented to work.
 *   **Styling:** The overall styling may be worked on more in the future.
