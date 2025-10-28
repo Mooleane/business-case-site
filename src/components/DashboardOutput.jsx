@@ -6,7 +6,7 @@ export default function DashboardOutput() {
     const { aiContent, isLoading, error, refresh } = useAIContent();
     
     if (isLoading) {
-        return <p className="main-header">Generating your results...</p>;
+        return <p className="main-header">Generating your results... Do not refresh this page.</p>;
     }
 
     if (error) {

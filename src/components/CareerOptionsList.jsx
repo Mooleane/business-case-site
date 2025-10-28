@@ -11,7 +11,7 @@ export default function CareerOptionsList() {
     };
 
     if (isLoading) {
-        return <p className="main-header">Generating your results...</p>;
+        return <p className="main-header">Generating your results... Do not refresh this page.</p>;
     }
 
     if (error || !aiContent?.matchedCareers) {
