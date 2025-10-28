@@ -13,17 +13,19 @@ export default function Navbar() {
                         <Link to="/">CareerNav</Link>
                     </li>
                         |
-                    <li>
+                    {/* Temporarily finding a new link placement. */}
+                    {/* <li>
                         <Link to="/Resources">Resources</Link>
-                    </li>
                         |
+                    </li> */}
                     <li>
                         <Link to="/Dashboard">Dashboard</Link>
                     </li>
-                        |
+                    {/* Currently hidden due to confusion from users.*/}
+                    {/*     | 
                     <li>
                         <a href="https://docs.google.com/forms/d/e/1FAIpQLSdXFfzm3KJF-U-vhzD9H3LTYx7cuCiywwXSg0-gyf7bvH1xRQ/viewform?usp=header" target="_blank" rel="noopener noreferrer">The Survey</a>
-                    </li>
+                    </li> */}
                 </ul>
             </header>
 
@@ -34,9 +36,10 @@ export default function Navbar() {
                     <Link to="/Profile">
                         <img className="profile-icon" src={profile_icon} alt="profile-icon" />
                     </Link>
-                    <Link to="/Settings">
+                    {/* Currently hidden due to it's usability being zero. */}
+                    {/* <Link to="/Settings">
                         <img className="settings-icon" src={settings_icon} alt="settings-icon" />
-                    </Link>
+                    </Link> */}
                 </section>
             </aside>
         </nav>
