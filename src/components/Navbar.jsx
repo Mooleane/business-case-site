@@ -31,8 +31,9 @@ export default function Navbar() {
 
             <aside className="nav-right">
                 <section className="profile-section">
-                    <Link to="/Signup"className="btn btn-hover btn-small">Sign Up</Link>
-                    <Link to="/Login"className="btn btn-hover btn-small">Login</Link>
+                    {/* Currently hidden due to it's usability being zero.*/}
+                    {/* <Link to="/Signup"className="btn btn-hover btn-small">Sign Up</Link>
+                    <Link to="/Login"className="btn btn-hover btn-small">Login</Link> */}
                     <Link to="/Profile">
                         <img className="profile-icon" src={profile_icon} alt="profile-icon" />
                     </Link>
