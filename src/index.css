@@ -278,6 +278,11 @@ a {
   text-decoration: none;
 }
 
+.profile-redirect {
+  padding-top: var(--spacing-medium);
+  margin: 0 auto;
+}
+
 .list-text {
   padding: 0px 20px;
   list-style: none;
