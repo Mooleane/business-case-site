@@ -101,6 +101,7 @@ body {
 .page-content {
   max-width: 1600px;
   margin: 0 auto;
+  padding-bottom: var(--spacing-big);
   background-color: rgb(244, 247, 248);
   min-height: 100vh;
   box-shadow: 0 0 20px rgba(0,0,0,0.5);
@@ -471,7 +472,7 @@ a {
 }
 
 .faq-item {
-  border: 1px solid rgba(0,0,0,0.08);
+  border: 1px solid black;
   border-radius: 8px;
   overflow: hidden;
   background: #fff;
@@ -490,10 +491,6 @@ a {
   cursor: pointer;
   font-size: 16px;
   text-align: left;
-}
-
-.faq-question:focus {
-  outline: 3px solid rgba(0,89,255,0.14);
 }
 
 .faq-question-text {
@@ -844,6 +841,21 @@ input:checked + .toggle-slider:before {
   display: flex;
   justify-content: space-between;
   margin-top: var(--spacing-medium);
+}
+
+/* About Section */
+
+.big-app-logo {
+  display: flex;
+  width: 160px;
+  height: 160px;
+}
+
+.about-description {
+  display: flex;
+  padding: 50px;
+  margin: 0 auto;
+  max-width: min(95%, 900px);
 }
 
 /* Smooth in-page scrolling for anchor links */

@@ -19,13 +19,13 @@ export default function Navbar() {
                         |
                     </li> */}
                     <li>
-                        <Link to="/Dashboard">Dashboard</Link>
+                        <Link to="/Dashboard">AI Tools</Link>
                     </li>
                     <li>
                         |
                     </li>
                     <li>
-                        <Link to="/features">Features</Link>
+                        <Link to="/About">About</Link>
                     </li>
                     {/* Currently hidden due to confusion from users.*/}
                     {/*     | 

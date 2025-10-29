@@ -1,11 +1,11 @@
 const featuresData = [
   {
-    name: "Personalized Career Recommendations",
-    description: "Leverage our advanced AI to get career suggestions tailored to your unique profile, interests, and goals.",
+    name: "Personal Dashboard",
+    description: "Know your next steps when you save your profile and receive personalized advice, targeted roles, and optimal goals.",
   },
   {
-    name: "Curated Career Resources",
-    description: "Access a wealth of human-curated and AI-powered resources, including articles, courses, and networking opportunities.",
+    name: "Career Recommendations",
+    description: "Leverage our advanced AI to get career suggestions tailored to your unique profile, hobbies, and work preferences.",
   },
   {
     name: "Trend Tracking",
