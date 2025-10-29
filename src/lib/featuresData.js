@@ -1,5 +1,9 @@
 const featuresData = [
   {
+    name: "Profile Configuration",
+    description: "Get the most targeted and relevant career suggestions when you complete your profile."
+  },
+  {
     name: "Personal Dashboard",
     description: "Know your next steps when you save your profile and receive personalized advice, targeted roles, and optimal goals.",
   },

@@ -662,7 +662,10 @@ a {
 }
 
 
-.text-within p, h1, h2, h3 {
+.text-within p, 
+h1, 
+.text-within > h2, 
+.text-within > h3 {
   padding-left: 10px;
   padding-right: 10px;
 }
@@ -849,6 +852,8 @@ input:checked + .toggle-slider:before {
   display: flex;
   width: 160px;
   height: 160px;
+  transform: translateY(100vh);
+  animation: slide-from-bottom 0.6s ease-out forwards;
 }
 
 .about-description {
@@ -856,6 +861,18 @@ input:checked + .toggle-slider:before {
   padding: 50px;
   margin: 0 auto;
   max-width: min(95%, 900px);
+  transform: translateY(100vh);
+  animation: slide-from-bottom 0.6s ease-out forwards;
+}
+
+.features {
+  transform: translateY(100vh);
+  animation: slide-from-bottom 0.6s ease-out forwards;
+  animation-delay: 0.1s;
+}
+
+.feature {
+  text-align: left;
 }
 
 /* Smooth in-page scrolling for anchor links */
