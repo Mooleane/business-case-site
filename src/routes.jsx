@@ -7,6 +7,7 @@ import Profile from './pages/Profile.jsx'
 import Dashboard from './pages/Dashboard.jsx'
 import CareerRecommendations from './pages/CareerRecommendations.jsx'
 import TrendTracker from './pages/TrendTracker.jsx'
+import FeatureOverview from './pages/FeatureOverview.jsx'
 // import Settings from './pages/Settings.jsx'
 // import TermsOfService from './pages/TermsOfService.jsx'
 
@@ -17,6 +18,7 @@ export default function routes() {
 			<Routes>
 				<Route path="/" element={<Home />} />
 				<Route path="/Resources" element={<Resources />} />
+				<Route path="/features" element={<FeatureOverview />} />
 				{/* Disabled for now (zero functionality). */}
 				{/* <Route path="/Signup" element={<Signup />} />
 				<Route path="/Login" element={<Login />} /> */}

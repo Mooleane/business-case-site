@@ -1,6 +1,6 @@
 /* Base Styles */
 body {
-  background-image: url("assets/colorful_tiles.jpg");
+  background-image: url("/colorful_tiles.jpg");
   background-repeat: repeat;
   font-family: 'Roboto', sans-serif;
   overflow-x: hidden;

@@ -21,6 +21,12 @@ export default function Navbar() {
                     <li>
                         <Link to="/Dashboard">Dashboard</Link>
                     </li>
+                    <li>
+                        |
+                    </li>
+                    <li>
+                        <Link to="/features">Features</Link>
+                    </li>
                     {/* Currently hidden due to confusion from users.*/}
                     {/*     | 
                     <li>
