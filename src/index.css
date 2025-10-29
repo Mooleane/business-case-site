@@ -136,7 +136,6 @@ a {
 .btn {
   border-radius: 5px;
   padding: 10px 20px;
-  cursor: pointer;
   text-decoration: none;
   box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
 }
@@ -181,6 +180,7 @@ a {
 
 .btn-hover {
   transition: plop 0.1s ease-in;
+  cursor: pointer;
   user-select: none;
 }
 
