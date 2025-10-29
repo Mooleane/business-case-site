@@ -25,9 +25,12 @@ export default function TrendOutput() {
                     <hr/>
                     {aiContent?.latestTrends?.map((trend, index) => (
                         <React.Fragment key={`trend-${index}`}>
-                            <h3><strong>{index+1}. {trend.careerNews}<br/></strong></h3>
-                            <p>Key Points: {trend.keyPoints}<br/><br/>Summary: {trend.summary}</p>
-                            <hr/>
+                            <ul className="list-text">
+                                <li className="btn btn-small">
+                                    <h3><strong>{index+1}. {trend.careerNews}<br/></strong></h3>
+                                    <p>Key Points: {trend.keyPoints}<br/><br/>Summary: {trend.summary}</p>
+                                </li>
+                            </ul>
                         </React.Fragment>
                     ))}
                 </section>
@@ -37,8 +40,9 @@ export default function TrendOutput() {
                     <hr/>
                     {aiContent?.data?.map((stat, index) => (
                         <React.Fragment>
-                            <p key={`stat-${index}`}><strong>{index+1} | </strong>{stat.statistic}<br/></p>
-                            <hr />
+                            <ul className="list-text">
+                                <li className="btn btn-small" key={`stat-${index}`}><strong>{index+1} | </strong>{stat.statistic}<br/></li>
+                            </ul>
                         </React.Fragment>
                     ))}
                 </section>
