@@ -8,9 +8,8 @@ export default function CareerRecommendations() {
     <>
       <Navbar />
       <DasboardNavbar />
-      <ProfileCheckWrapper>
-        <CareerOptionsList />
-      </ProfileCheckWrapper>
+      <ProfileCheckWrapper />
+      <CareerOptionsList />
     </>
   )
 }

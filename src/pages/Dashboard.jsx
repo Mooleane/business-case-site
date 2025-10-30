@@ -8,9 +8,8 @@ export default function Dashboard() {
     <>
       <Navbar />
       <DasboardNavbar />
-      <ProfileCheckWrapper>
-        <DashboardOutput />
-      </ProfileCheckWrapper>
+      <ProfileCheckWrapper />
+      <DashboardOutput />
     </>
   )
 }

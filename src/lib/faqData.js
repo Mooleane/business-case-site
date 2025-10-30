@@ -1,7 +1,7 @@
 const faqData = [
   {
     question: "What kind of career resources are available on the platform?",
-    answer: "A human-curated and AI-curated list of resources are provided, including online courses and platforms to help you advance in your chosen career path."
+    answer: "A AI-curated list of resources are provided, including online courses and platforms to help you advance in your chosen career path."
   },
   {
     question: "How does the AI tailor career suggestions to my profile?",

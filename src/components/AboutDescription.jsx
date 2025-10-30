@@ -7,7 +7,7 @@ export default function AboutDescription() {
         <section>
             <p>
                 CareerNav is a platform designed to streamline the career discovery process. 
-                The AI tools provide personalized career recommendations, tracked trends, and curated resources to achieve your career goals.
+                The AI tools provide personalized career recommendations, latest trends, and curated resources to achieve your career goals.
             </p>
         </section>
     </section>

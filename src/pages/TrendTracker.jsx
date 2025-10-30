@@ -8,9 +8,8 @@ export default function TrendTracker() {
     <>
       <Navbar />
       <DasboardNavbar />
-      <ProfileCheckWrapper>
-        <TrendOutput />
-      </ProfileCheckWrapper>
+      <ProfileCheckWrapper />
+      <TrendOutput />
     </>
   )
 }
