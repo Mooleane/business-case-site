@@ -79,7 +79,7 @@ export default function ProfileSetup() {
                             onChange={handleChange}
                             rows="4"
                             cols="50" 
-                            placeholder="List your hobbies"
+                            placeholder="List your hobbies (e.g., Drawing, Programming, Music, etc)."
                         />
                         <br/><br/>
                         <label htmlFor="work">Work Preferences:</label><br/>
@@ -90,7 +90,7 @@ export default function ProfileSetup() {
                             onChange={handleChange}
                             rows="4" 
                             cols="50"
-                            placeholder="Describe your work preferences"
+                            placeholder="Describe your work preferences (e.g., Working alone, Being a leader, Having breaks, etc)."
                         />
                     </p>
                     <section>

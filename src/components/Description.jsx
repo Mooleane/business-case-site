@@ -11,8 +11,8 @@ export default function Description() {
             body: "See roles that fit your strengths, skills in demand, and clear steps to transition into new careers.",
         },
         {
-            title: "Set goals & track progress",
-            body: "Create milestones, set deadlines, and get ai-assisted tasks to keep momentum toward your target role.",
+            title: "Digest next steps",
+            body: "Get ai-assisted tasks to keep momentum toward your target role, based on your interests.",
         },
     ];
 
