@@ -28,12 +28,12 @@ To set up and run this project locally, follow these steps:
 
 1.  **Clone the repository:**
     ```bash
-    git clone <repository-url>
+    git clone https://github.com/Mooleane/career-nav.git
     ```
 
 2.  **Navigate to the project directory:**
     ```bash
-    cd business-case-site
+    cd career-nav
     ```
 
 3.  **Install dependencies:**
@@ -51,8 +51,6 @@ To set up and run this project locally, follow these steps:
 
 This project has some missing functionality to its elements.
 
-*   **Authentication:** Signup and Login functionality are not implemented.
 *   **Core Features:**
     *   Trend Tracker: The AI functionality works, but is limited to an October 2023 due to it's usage of gpt-4o-mini.
-*   **Settings:** Settings page is a placeholder (inaccessible) due to unsaved inputs + Dark Mode is not yet implemented to work.
 *   **Styling:** The overall styling may be worked on more in the future.
