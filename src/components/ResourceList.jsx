@@ -1,5 +1,5 @@
 import { useState } from "react";
-import resources from "../lib/resources"
+import resources from "../lib/resources";
 
 export default function ResourceList() {
     const [selectedResource, setSelectedResource] = useState(null);

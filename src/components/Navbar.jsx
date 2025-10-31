@@ -1,7 +1,7 @@
-import { Link } from "react-router-dom"
-import career_nav_logo from "../assets/career_nav_logo.png"
-import profile_icon from "../assets/profile_icon.png"
-import settings_icon from "../assets/settings_icon.png"
+import { Link } from "react-router-dom";
+import career_nav_logo from "../assets/career_nav_logo.png";
+import profile_icon from "../assets/profile_icon.png";
+import settings_icon from "../assets/settings_icon.png";
 
 export default function Navbar() {
     return (
@@ -27,7 +27,7 @@ export default function Navbar() {
                     </li>
                         |
                     <li>
-                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdXFfzm3KJF-U-vhzD9H3LTYx7cuCiywwXSg0-gyf7bvH1xRQ/viewform?usp=header" target="_blank" rel="noopener noreferrer">The Survey</a>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdXFfzm3KJF-U-vhzD9H3LTYx7cuCiywwXSg0-gyf7bvH1xRQ/viewform?usp=header" target="_blank" rel="noopener noreferrer">Feedback Survey</a>
                     </li>
                 </ul>
             </header>

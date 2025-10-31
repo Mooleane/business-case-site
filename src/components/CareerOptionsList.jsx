@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useAIContent } from '../hooks/useAIContent';
 import RefreshAI from './RefreshAI.jsx';
+import LoadingSpinner from './LoadingSpinner.jsx';
 
 export default function CareerOptionsList() {
     const [selectedCareer, setSelectedCareer] = useState(null);
@@ -11,7 +12,9 @@ export default function CareerOptionsList() {
     };
 
     if (isLoading) {
-        return <p className="main-header">Generating your results... Do not refresh this page.</p>;
+        return (
+            <LoadingSpinner/>
+        );
     }
 
     if (error || !aiContent?.matchedCareers) {

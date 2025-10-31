@@ -880,6 +880,15 @@ input:checked + .toggle-slider:before {
   text-align: left;
 }
 
+/* Loading Spinner */
+.loading-icon {
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
 /* Smooth in-page scrolling for anchor links */
 html {
   scroll-behavior: smooth;
